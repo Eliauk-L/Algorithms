@@ -99,6 +99,8 @@ public class Palindromic {
             left--;
             right++;
         }
+        //当 while 循环结束时，left 和 right 已经多走了一步（因为不相等才退出）。
+        // 所以实际回文的边界是 left+1 到 right-1，长度就是 (right-1) - (left+1) + 1 = right - left - 1。
         return right - left - 1;
     }
 
